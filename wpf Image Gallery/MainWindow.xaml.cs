@@ -121,8 +121,6 @@ namespace wpf_Image_Gallery
             var info = new Info();
            
             info.images = Images.ToList();
-            info.index = (sender as ListBox).SelectedIndex;
-            info.first = ((sender as ListBox).SelectedItem as Image).ImagePath;
             info.ShowDialog();
         }
 

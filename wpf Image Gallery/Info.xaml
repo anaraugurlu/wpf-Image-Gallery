@@ -6,16 +6,16 @@
         xmlns:local="clr-namespace:wpf_Image_Gallery" xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Title="Info" Height="450" Width="800" WindowStyle="None" ResizeMode="NoResize"  Name="info">
-    <Window.Resources >
+    <Window.Resources  >
         <sys:Double x:Key="btnH">35</sys:Double>
         <sys:Double x:Key="btnW">50</sys:Double>
-        <Style x:Key="RoundCorner" TargetType="{x:Type Button}">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Grid>
-                            <Ellipse Fill="Firebrick" />
-                            <ContentControl Content="{TemplateBinding Content}" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Style x:Key="Corner"  TargetType="{x:Type Button}">
+            <Setter Property="Template" >
+                <Setter.Value >
+                    <ControlTemplate  TargetType="{x:Type Button}">
+                        <Grid Background="White"  >
+                            <Ellipse Fill="LightGreen"   />
+                            <ContentControl Content="{TemplateBinding Content}" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Grid>
                     </ControlTemplate>
                 </Setter.Value>
@@ -39,10 +39,10 @@
         <Image Name="pic" Grid.Row=" 1" Stretch="Uniform"   Source="Images\1.png" Grid.ColumnSpan="2" Margin="150,11.6,0.4,37.6" Grid.RowSpan="2"/>
 
 
-        <Button Name="btnBack" Click="btnBack_Click" Grid.Column=" 1" Width="{StaticResource btnW }"   Grid.Row=" 2" Height="{StaticResource btnH }" Margin="55.6,0,394.4,14.6"  Background="LightGreen" >Back</Button>
-        <Button Name="btnNext" Click="btnNext_Click"  Grid.Column=" 1" Width="{StaticResource btnW }"  Background="LightGreen"    Margin="110.6,0,339.4,14.6"   Grid.Row=" 2" Height="{StaticResource btnH }">Next</Button>
-        <Button Name="btnpause" Click="btnpause_Click"    Grid.Column=" 1" Width="{StaticResource btnW }"  Background="LightGreen"   Margin="317.6,0,132.4,14.6"     Grid.Row=" 2" Height="{StaticResource btnH }">Pause</Button>
-        <Button Name="btnplay" Click="btnplay_Click"     Grid.Column=" 1" Width="{StaticResource btnW }"  Background="LightGreen"     Grid.Row=" 2" Height="{StaticResource btnH }" Margin="372.6,0,77.4,14.6" RenderTransformOrigin="0.504,0.5">Play</Button>
+        <Button Name="btnBack" Click="btnBack_Click" Grid.Column=" 1" Width="{StaticResource btnW }" Style="{StaticResource Corner }"   Grid.Row=" 2" Height="{StaticResource btnH }" Margin="55.6,11,394.4,3.6"  Background="LightGreen" >Back</Button>
+        <Button Name="btnNext" Click="btnNext_Click"  Grid.Column=" 1" Width="{StaticResource btnW }"  Style="{StaticResource Corner }"  Background="LightGreen"    Margin="110.6,10,339.4,4.6"   Grid.Row=" 2" Height="{StaticResource btnH }">Next</Button>
+        <Button Name="btnpause" Click="btnpause_Click"    Grid.Column=" 1" Width="{StaticResource btnW }"  Style="{StaticResource Corner }"  Background="LightGreen"   Margin="317.6,10,132.4,4.6"     Grid.Row=" 2" Height="{StaticResource btnH }">Pause</Button>
+        <Button Name="btnplay" Click="btnplay_Click"     Grid.Column=" 1" Width="{StaticResource btnW }"  Style="{StaticResource Corner }"  Background="LightGreen"     Grid.Row=" 2" Height="{StaticResource btnH }" Margin="372.6,10,77.4,4.6" RenderTransformOrigin="0.504,0.5">Play</Button>
 
         <Grid Grid.Column=" 0" Grid.Row=" 0">
             <Button Width=" 50" Height=" 50" Click="Button_Click"   Cursor="Hand"  Background="Transparent"  BorderBrush="White"  FontSize=" 11" BorderThickness=" 1"   >
