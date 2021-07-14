@@ -1,0 +1,133 @@
+﻿<Window x:Class="wpf_Image_Gallery.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf_Image_Gallery" xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="Main';Window" Name="Window" Height="463.393" Width="884.312" WindowStyle="None" ResizeMode="NoResize" 
+        > <Window.Resources>
+    <sys:Double x:Key="Size">150</sys:Double>
+    </Window.Resources>
+   
+
+
+        <!--<Grid.ColumnDefinitions >
+            <ColumnDefinition  Width="1*"/>
+            <ColumnDefinition  Width="1*"/>
+            <ColumnDefinition  Width="1*"/>
+            <ColumnDefinition  Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions >
+            <RowDefinition Height="1* "  />
+            <RowDefinition Height="1* "  />
+        </Grid.RowDefinitions>
+        <Grid Grid.Column=" 3" Grid.Row=" 0">
+            <Button Width=" 25" Height=" 25"   Cursor="Hand" Margin="190,0,0,180" Background="Transparent" Click="Button_Click" BorderBrush="White"  FontSize=" 11" BorderThickness=" 1"   >
+                <StackPanel Orientation="Horizontal" >
+                    <Image Source="Images\X.png"  Width=" 20" Height=" 20" ></Image>
+                </StackPanel>
+            </Button >
+        </Grid>
+        
+        
+        <Button Grid.Column=" 0"  Grid.Row=" 0" Width=" 200" Height=" 140"  MouseDoubleClick="Button_MouseDoubleClick" Cursor="Hand"  Background="Transparent"  BorderBrush="White"  FontSize=" 11" BorderThickness=" 1"   >
+            <StackPanel Orientation="Horizontal" >
+        <Image Source="Images\1.png"  Width=" 200" Height=" 200" ></Image>
+            </StackPanel>
+        </Button >
+        <Button Grid.Column=" 0"  Grid.Row=" 1" Width=" 200" Height=" 140"  Cursor="Hand" MouseDoubleClick="Button_MouseDoubleClick"   Background="Transparent"  BorderBrush="White"  FontSize=" 11" BorderThickness=" 1"   >
+            <StackPanel Orientation="Horizontal" >
+        <Image Source="Images\2.png" Width=" 200" Height=" 200" ></Image>
+            </StackPanel>
+        </Button >
+
+        <Button Grid.Column=" 1"  Grid.Row=" 0" Width=" 200" Height=" 140"  Cursor="Hand" MouseDoubleClick="Button_MouseDoubleClick"   Background="Transparent"  BorderBrush="White"  FontSize=" 11" BorderThickness=" 1"   >
+            <StackPanel Orientation="Horizontal" >
+        <Image Source="Images\3.png" Width=" 200" Height=" 200" ></Image>
+            </StackPanel>
+        </Button >
+
+
+        <Button Grid.Column=" 1"  Grid.Row=" 1" Width=" 200" Height=" 140"  Cursor="Hand" MouseDoubleClick="Button_MouseDoubleClick"  Background="Transparent"  BorderBrush="White"  FontSize=" 11" BorderThickness=" 1"   >
+            <StackPanel Orientation="Horizontal" >
+        <Image Source="Images\4.png" Width=" 200" Height=" 200" ></Image>
+            
+            </StackPanel>
+        </Button >
+
+
+        <Button Grid.Column=" 2"  Grid.Row=" 0" Width=" 200" Height=" 140"  Cursor="Hand"  MouseDoubleClick="Button_MouseDoubleClick"  Background="Transparent"  BorderBrush="White"  FontSize=" 11" BorderThickness=" 1"   >
+            <StackPanel Orientation="Horizontal" >
+        <Image Source="Images\5.png" Width=" 200" Height=" 200" ></Image>
+               
+            </StackPanel>
+        </Button >
+
+        <Button Grid.Column=" 2"  Grid.Row=" 1" Width=" 200" Height=" 140"  Cursor="Hand" MouseDoubleClick="Button_MouseDoubleClick" Background="Transparent"  BorderBrush="White"  FontSize=" 11" BorderThickness=" 1"   >
+            <StackPanel Orientation="Horizontal" >
+        <Image Source="Images\6.png" Width=" 200" Height=" 200" ></Image>
+               
+            </StackPanel>
+        </Button >
+
+
+        <Button Grid.Column=" 3"  Grid.Row=" 0" Width=" 200" Height=" 140"  Cursor="Hand"  Background="Transparent"  BorderBrush="White" MouseDoubleClick="Button_MouseDoubleClick" FontSize=" 11" BorderThickness=" 1"   >
+            <StackPanel Orientation="Horizontal" >
+        <Image Source="Images\7.png" Width=" 200" Height=" 200" ></Image>
+           
+            </StackPanel>
+        </Button >
+
+
+        <Button Grid.Column=" 3"  Grid.Row=" 1" Width=" 200" Height=" 140"  Cursor="Hand"  Background="Transparent"  BorderBrush="White"  FontSize=" 11" BorderThickness=" 1"  MouseDoubleClick="Button_MouseDoubleClick" >
+            <StackPanel Orientation="Horizontal" >
+        <Image Source="Images\8.png" Width=" 200" Height=" 200" ></Image>
+            </StackPanel>
+        </Button >-->
+       
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="11*"/>
+            </Grid.RowDefinitions>
+       
+        <Menu>
+            <Button Width=" 25" Height=" 25"   Cursor="Hand"  Background="Transparent" Click="Button_Click" BorderBrush="White"  FontSize=" 11" BorderThickness=" 1"   >
+                <StackPanel Orientation="Horizontal" >
+                <Image Source="Images\X.png"  Width=" 20" Height=" 20" ></Image>
+            </StackPanel>
+        </Button > 
+            <MenuItem Header="File " FontSize="25"  Width=" 70" Height=" 30" Foreground="Black" Background="Transparent"  >
+                <MenuItem  Header="Open"></MenuItem>
+                <MenuItem     Header="New"></MenuItem>
+                <MenuItem     Header="Save"></MenuItem>
+                <MenuItem     Header="Save as"></MenuItem>
+            </MenuItem>
+                <MenuItem Width=" 70" Height=" 30" Header="View " FontSize="25" Foreground="Black" Background="Transparent"  >
+                    <MenuItem Click="MenuItem_Click_1" Header="Medium"></MenuItem>
+                    <MenuItem Click="MenuItem_Click_2"    Header="Large"></MenuItem>
+                    <MenuItem Click="MenuItem_Click_3"  Header="Small"></MenuItem>
+                </MenuItem>
+            <MenuItem Header="Edit " FontSize="25"  Width=" 70" Height=" 30" Foreground="Black" Background="Transparent"  >
+                <MenuItem  Header="add file"></MenuItem>
+                <MenuItem     Header="add folder"></MenuItem>
+            </MenuItem>
+          
+        </Menu>
+            <ListBox AllowDrop="True" DragEnter="Image_DragEnter"   MouseDoubleClick="Image_MouseDoubleClick"   Name="Image" Grid.Row="1" ItemsSource="{Binding Images}" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel IsItemsHost="True"></WrapPanel>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Image Height="{DynamicResource Size}" Width="{DynamicResource Size}" Source="{Binding ImagePath}"></Image>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+        </Grid>
+
+</Window>
